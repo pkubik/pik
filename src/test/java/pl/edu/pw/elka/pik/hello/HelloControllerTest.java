@@ -36,6 +36,6 @@ public class HelloControllerTest {
     public void testIndex() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Hello world")));
+                .andExpect(content().string(equalTo("Hello fail")));
     }
 }
