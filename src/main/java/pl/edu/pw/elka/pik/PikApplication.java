@@ -17,6 +17,7 @@ public class PikApplication {
 		Arrays.sort(beanNames);
 		for (String beanName : beanNames) {
 			System.out.println(beanName);
+			System.out.println("Niepotrzebny sysout");
 		}
 	}
 
