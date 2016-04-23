@@ -6,7 +6,7 @@
     <groupId>pl.edu.pw.elka.pik</groupId>
     <artifactId>pik</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>pik</name>
     <description>Demo project for Spring Boot</description>
