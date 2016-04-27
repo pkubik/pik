@@ -6,6 +6,7 @@ import pl.edu.pw.elka.pik.EntityObjects.User;
 import pl.edu.pw.elka.pik.repositories.UserRepository;
 
 import javax.inject.Inject;
+import java.util.List;
 
 /**
  * @author mzaremba
@@ -28,5 +29,11 @@ public class UserServiceImpl implements UserService
     public User save( User user )
     {
         return repository.save( user );
+    }
+
+    @Override
+    public List<User> getUsers()
+    {
+        return repository.findAll();
     }
 }
