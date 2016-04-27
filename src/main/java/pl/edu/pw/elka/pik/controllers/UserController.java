@@ -9,6 +9,7 @@ import pl.edu.pw.elka.pik.services.UserService;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  * @author mzaremba
@@ -29,5 +30,10 @@ public class UserController
     @RequestMapping(value="/user", method = RequestMethod.POST)
     public User createUser(@RequestBody @Valid final User user){
         return userService.save(user);
+    }
+
+    @RequestMapping(value="/user", method = RequestMethod.GET)
+    public List<User> getUsers(){
+        return userService.getUsers();
     }
 }
