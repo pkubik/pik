@@ -2,8 +2,8 @@ package pl.edu.pw.elka.pik.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pl.edu.pw.elka.pik.EntityObjects.User;
-import pl.edu.pw.elka.pik.repositories.UserRepository;
+import pl.edu.pw.elka.pik.entities.Player;
+import pl.edu.pw.elka.pik.repositories.PlayerRepository;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -13,26 +13,26 @@ import java.util.List;
  */
 @Service
 @SuppressWarnings( "unused" )
-public class UserServiceImpl implements UserService
+public class PlayerServiceImpl implements PlayerService
 {
 
-    private final UserRepository repository;
+    private final PlayerRepository repository;
 
     @Inject
-    public UserServiceImpl( UserRepository repository )
+    public PlayerServiceImpl(PlayerRepository repository )
     {
         this.repository = repository;
     }
 
     @Override
     @Transactional
-    public User save( User user )
+    public Player save(Player player)
     {
-        return repository.save( user );
+        return repository.save(player);
     }
 
     @Override
-    public List<User> getUsers()
+    public List<Player> getPlayers()
     {
         return repository.findAll();
     }
