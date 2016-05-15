@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/pik-0.0.1-SNAPSHOT.jar
+web: mvn spring-boot:run -Dserver.port=$PORT
