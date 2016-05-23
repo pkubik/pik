@@ -1,1 +1,1 @@
-web: java -jar pik-project.jar -Dserver.port=$PORT
+web: java -jar target/pik-project.jar -Dserver.port=$PORT
