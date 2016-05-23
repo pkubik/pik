@@ -6,7 +6,7 @@
     <groupId>pl.edu.pw.elka.pik</groupId>
     <artifactId>pik</artifactId>
     <version>0.0.2-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <!--<packaging>jar</packaging>-->
 
     <name>pik</name>
     <description>Demo project for Spring Boot</description>
@@ -95,6 +95,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                    <configuration>
+                        <finalName>pik-project</finalName>
+                    </configuration>
+                </execution>
+            </executions>
             </plugin>
         </plugins>
     </build>

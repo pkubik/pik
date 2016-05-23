@@ -1,1 +1,1 @@
-web: mvn spring-boot:run -Dserver.port=$PORT
+web: java -jar pik-project.jar -Dserver.port=$PORT
