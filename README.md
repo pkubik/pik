@@ -24,10 +24,10 @@ $ mvn package
 
 Run the server:
 ```
-$ java -jar target/pik-<VERSION>.jar
+$ java -jar target/pik-project.jar
 ```
 
-Alternatively you can replace two previous steps with one:
+Alternatively you can replace previous step with one:
 ```
 $ mvn spring-boot:run
 ```
@@ -36,3 +36,5 @@ You can kill the running server with the keyboard interrupt `CTRL+C`.
 
 
 > Note: Maven will check for changes and repeat only the necessary steps during consequent runs.
+
+Refer to the wiki for more details.
