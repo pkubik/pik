@@ -1,9 +1,6 @@
 package pl.edu.pw.elka.pik.controllers;
 
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.edu.pw.elka.pik.entities.Player;
 import pl.edu.pw.elka.pik.services.PlayerService;
 
@@ -27,13 +24,25 @@ public class PlayerController
         this.playerService = playerService;
     }
 
+    @RequestMapping(value="/player/{id}", method = RequestMethod.GET)
+    public Player getPlayers(@PathVariable(value="id") Long id)
+    {
+        return playerService.getPlayer(id);
+    }
+
     @RequestMapping(value="/player", method = RequestMethod.POST)
     public Player createPlayer(@RequestBody @Valid final Player player){
         return playerService.save(player);
     }
 
-    @RequestMapping(value="/player", method = RequestMethod.GET)
+    @RequestMapping(value="/players", method = RequestMethod.GET)
     public List<Player> getPlayers(){
         return playerService.getPlayers();
+    }
+
+    @RequestMapping(value="/players/{page},{size}", method = RequestMethod.GET)
+    public List<Player> getPlayers(@PathVariable(value="page") int page, @PathVariable(value="size") int size)
+    {
+        return playerService.getPageOfPlayers(page, size);
     }
 }

@@ -10,5 +10,7 @@ import java.util.List;
 public interface PlayerService
 {
     Player save(Player user);
+    Player getPlayer(Long id);
     List<Player> getPlayers();
+    List<Player> getPageOfPlayers(int page, int size);
 }
