@@ -1,8 +1,6 @@
 package pl.edu.pw.elka.pik.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -14,9 +12,10 @@ import javax.validation.constraints.NotNull;
 public class Player
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, updatable = false)
     @NotNull
-    private Long id;
+    private Long id = new Long(-1);
 
     @Column(name = "name", nullable = false)
     @NotNull
@@ -26,12 +25,12 @@ public class Player
     @NotNull
     private String email;
 
-    public long getId() {
+    public Long getId() {
 
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
