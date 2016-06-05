@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.edu.pw.elka.pik.entities.Player;
 import pl.edu.pw.elka.pik.repositories.PlayerRepository;
+import pl.edu.pw.elka.pik.services.api.PlayerService;
 
 import javax.inject.Inject;
 import java.util.List;

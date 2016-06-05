@@ -1,13 +1,10 @@
 package pl.edu.pw.elka.pik.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import pl.edu.pw.elka.pik.entities.Player;
 import pl.edu.pw.elka.pik.entities.Tag;
-import pl.edu.pw.elka.pik.services.PlayerService;
 import pl.edu.pw.elka.pik.services.TagService;
 
 import javax.inject.Inject;
-import javax.validation.Valid;
 import java.util.List;
 
 /**
