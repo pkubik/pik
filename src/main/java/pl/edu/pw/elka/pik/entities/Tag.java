@@ -9,16 +9,6 @@ import javax.validation.constraints.NotNull;
  * @author pkubik
  */
 @Entity
-@NamedNativeQuery(
-        name = "Tag.searchTags",
-        query = "SELECT search.id, search.name, search.description\n" +
-                "FROM\n" +
-                "  (SELECT id, name, description,\n" +
-                "   ts_rank(text_search_vector, to_tsquery(?1)) as relevancy\n" +
-                "   FROM tag) AS search\n" +
-                "WHERE relevancy > 0\n" +
-                "ORDER BY relevancy DESC;",
-        resultClass = Tag.class)
 public class Tag
 {
     @Id
