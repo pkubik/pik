@@ -10,11 +10,10 @@ import java.util.List;
 /**
  * Created by Mateusz on 2016-05-31.
  */
-public interface AchievementsRepository extends PagingAndSortingRepository<Achievement, Long> {
+public interface AchievementRepository extends PagingAndSortingRepository<Achievement, Long> {
 
     Achievement findByName(String name);
 
-    @Query("SELECT a FROM Achievement a WHERE a.game.id = : game.id ")
-    List<Achievement> find(Game game);
+    List<Achievement> findByGame(Game game);
 
 }

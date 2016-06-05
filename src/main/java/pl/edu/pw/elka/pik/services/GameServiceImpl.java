@@ -13,11 +13,12 @@ import java.util.List;
  * Created by Mateusz on 2016-05-31.
  */
 @Service
+@SuppressWarnings("unused")
 public class GameServiceImpl implements GameService {
 
-    @Inject
     GameRepository gameRepository;
 
+    @Inject
     public GameServiceImpl(GameRepository gameRepository) {
         this.gameRepository = gameRepository;
     }

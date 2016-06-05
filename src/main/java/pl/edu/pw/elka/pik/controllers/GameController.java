@@ -19,9 +19,9 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class GameController {
 
-    @Inject
     private GameService gameService;
 
+    @Inject
     public GameController(GameService gameService) {
         this.gameService = gameService;
     }
