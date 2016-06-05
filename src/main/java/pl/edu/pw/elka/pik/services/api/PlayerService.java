@@ -1,4 +1,4 @@
-package pl.edu.pw.elka.pik.services;
+package pl.edu.pw.elka.pik.services.api;
 
 import pl.edu.pw.elka.pik.entities.Player;
 
